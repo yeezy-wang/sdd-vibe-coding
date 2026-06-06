@@ -1,22 +1,10 @@
-# SDD Vibe Coding Pro（专业版）
+# SDD Vibe Coding
 
-> 面向产品经理的规范驱动开发（SDD）AI 编程 Skill —— 专业版。
+> 面向产品经理的规范驱动开发（SDD）AI 编程 Skill —— 让不懂代码的 PM 也能指挥 AI 完成严格工程纪律的项目开发。
 
 ## 这是什么？
 
-SDD Vibe Coding Pro 是一套给 AI 编程 Agent（如 Claude Code、Cursor、Copilot）使用的**工作流 Skill**。它将你的角色从"不懂代码的产品经理"转变为"项目指挥官"——你只需要确认需求和验收，AI 按照严格的工程纪律完成开发。
-
-## 基础版 vs 专业版
-
-| 特性 | 基础版 | 专业版 |
-|------|--------|--------|
-| 规范文档 | 简化的 5 份文档 | 5 份正式文档 + 评审重点 |
-| Harness 验证 | 自检 | Lint → Type → Test → Build 四层链 |
-| TDD | 建议 | 强制（红绿循环） |
-| Git 分支 | 不提 | main 锁定 + milestone-x 分支 |
-| 自愈机制 | 3 次修复上限 | Auto-Heal 3 轮 + A/B/C 升级选项 |
-| 日志 | 无 | /logs/YYYY-MM-DD.md |
-| 交付 | 简单 Checklist | DEPLOY/README/CHANGELOG/review 全套 |
+SDD Vibe Coding 是一套给 AI 编程 Agent（如 Claude Code、Cursor、Copilot）使用的**工作流 Skill**。它将你的角色从"不懂代码的产品经理"转变为"项目指挥官"——你只需确认需求和验收，AI 按照严格的工程纪律完成所有技术工作。
 
 ## 四阶段工作流
 
@@ -31,29 +19,29 @@ Phase 4: 交付与复盘     → 上线 Checklist + 项目复盘 + UAT 验收
 
 ### 方法 1：直接导入 .skill 文件
 
-1. 下载 `sdd-vibe-coding-pro.skill`
+1. 下载 `sdd-vibe-coding.skill`
 2. 在 Claude Code 中运行：`/skill:install <path-to-.skill-file>`
 
 ### 方法 2：手动安装
 
-将 `sdd-vibe-coding-pro/` 目录复制到 `~/.claude/skills/` 下。
+将 `sdd-vibe-coding/` 目录复制到 `~/.claude/skills/` 下。
 
 ### 方法 3：Git Clone
 
 ```bash
-git clone https://github.com/yeezy-wang/sdd-vibe-coding-pro.git
-cd sdd-vibe-coding-pro && cp -r sdd-vibe-coding-pro ~/.claude/skills/
+git clone https://github.com/yeezy-wang/sdd-vibe-coding.git
+cd sdd-vibe-coding && cp -r sdd-vibe-coding ~/.claude/skills/
 ```
 
 ## 触发方式
 
 在 Claude Code 中输入类似以下内容即可触发：
 
-- "我想用专业版 SDD 流程开发一个 XX 系统"
-- "帮我按严格模式做一个 XX 应用，需要分支管理和测试覆盖"
-- "用 SDD Pro 开发一个企业级 XX 平台"
+- "我想开发一个 XX 系统，帮我按 SDD 流程来做"
+- "帮我做一个 XX 应用，需要分支管理、测试覆盖和里程碑拆分"
+- "我想从零开始认真开发一个 XX 产品"
 
-也支持 `/sdd-vibe-coding-pro` 直接调用。
+也支持 `/sdd-vibe-coding` 直接调用。
 
 ## 适用场景
 
@@ -64,7 +52,7 @@ cd sdd-vibe-coding-pro && cp -r sdd-vibe-coding-pro ~/.claude/skills/
 
 ## 核心工程实践
 
-- **Spec-First**：先写规范文档，确认后才写代码
+- **Spec-First**：5 份规范文档评审通过后才写代码
 - **TDD**：先写失败测试，再写实现
 - **Harness 四层验证**：Lint → Type → Test → Build
 - **Git 分支保护**：main 锁定，milestone 分支开发
