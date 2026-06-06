@@ -41,8 +41,8 @@ Phase 4: 交付与复盘     → 上线 Checklist + 项目复盘 + UAT 验收
 ### 方法 3：Git Clone
 
 ```bash
-git clone https://github.com/<your-username>/sdd-vibe-coding-pro.git
-cp -r sdd-vibe-coding-pro/sdd-vibe-coding-pro ~/.claude/skills/
+git clone https://github.com/yeezy-wang/sdd-vibe-coding-pro.git
+cd sdd-vibe-coding-pro && cp -r sdd-vibe-coding-pro ~/.claude/skills/
 ```
 
 ## 触发方式
